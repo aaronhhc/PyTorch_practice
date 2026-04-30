@@ -1,6 +1,6 @@
 # PyTorch Practice Repository
 
-A collection of PyTorch practice exercises covering fundamental concepts including Tensor operations, Custom Dataset implementation, and DataLoader usage.
+A collection of PyTorch practice exercises covering fundamental concepts including Tensor operations, Custom Dataset implementation, DataLoader usage, and neural network layers.
 
 ## 📂 Project Structure
 
@@ -10,7 +10,9 @@ PyTorch_practice/
 │   ├── tensor.py                  # Tensor operations tutorial
 │   ├── custom_dataset.py          # Custom Dataset & DataLoader implementation
 │   ├── fashion_mnist.py           # Fashion MNIST dataset example
-│   ├── pytorch_custom_dataset_notes.md  # Learning notes (Traditional Chinese)
+│   ├── model_layers.py            # Neural network layers example
+│   ├── pytorch_custom_dataset_notes.md  # Custom Dataset notes (Traditional Chinese)
+│   ├── pytorch_model_layers_notes.md    # Model layers notes (Traditional Chinese)
 │   ├── custom_data/               # Custom image dataset
 │   │   ├── label.csv             # Image labels CSV file
 │   │   └── images/               # Image directory
@@ -39,12 +41,27 @@ Fashion MNIST dataset examples:
 - Load built-in dataset
 - Data visualization
 
+### model_layers.py
+Neural network layers example:
+- Build a simple model with `nn.Sequential`
+- Use `nn.Flatten`, `nn.Linear`, and `nn.ReLU`
+- Convert logits to probabilities with `nn.Softmax`
+- Pick predicted classes with `argmax`
+
 ### pytorch_custom_dataset_notes.md
 Learning notes in Traditional Chinese covering:
 - Three required dunder methods for Custom Dataset
 - labels.csv and iloc usage
 - transform, Compose, Resize, ToTensor explanations
 - Common errors and solutions
+
+### pytorch_model_layers_notes.md
+Learning notes in Traditional Chinese covering:
+- Tensor shape flow through model layers
+- Flatten, Linear, ReLU, Sequential, Softmax explanations
+- Logits vs probabilities
+- `argmax` prediction logic
+- Common shape questions for batch and channel dimensions
 
 ## 🚀 Quick Start
 
@@ -60,6 +77,9 @@ python tensor.py
 
 # Run fashion_mnist.py
 python fashion_mnist.py
+
+# Run model_layers.py
+python model_layers.py
 ```
 
 ## 📋 Custom Dataset Format
@@ -94,10 +114,13 @@ custom_data/
 
 ## 📝 Documentation
 
-For detailed learning notes, see [pytorch_custom_dataset_notes.md](quickstart/pytorch_custom_dataset_notes.md).
+For detailed learning notes, see:
+
+- [pytorch_custom_dataset_notes.md](quickstart/pytorch_custom_dataset_notes.md)
+- [pytorch_model_layers_notes.md](quickstart/pytorch_model_layers_notes.md)
 
 ---
 
 > 🔖 Version: 1.0.0  
-> 📅 Last Updated: April 29, 2026  
+> 📅 Last Updated: April 30, 2026  
 > ⏳ Status: In Progress
